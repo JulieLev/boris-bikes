@@ -1,4 +1,4 @@
-require 'boris_bikes_1'
+require 'docking_station'
 
 describe "Docking Station" do
 
