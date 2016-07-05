@@ -1,5 +1,8 @@
 require 'docking_station'
 
-describe "Docking Station" do
-
+describe DockingStation do
+  it 'responds to release_bike' do
+    #it { is_expected.to respond_to :release_bike }
+    expect(subject).to respond_to :release_bike
+  end
 end
