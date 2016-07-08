@@ -9,19 +9,9 @@ describe DockingStation do
 
   it  { is_expected.to respond_to(:capacity) }
 
-  #describe 'when new' do
-  #  DockingStation.new capacity
-  #  it 'can be assigned a capacity' do
-  #    expect(subject.capacity).to eq capacity
-  #  end
-  #end # end describe when new
-
-  #it 'has a default capacity' do
-  #  expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
-  #end
-
-
-
+    it 'has a default capacity if none set' do
+      expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+    end
 
   it 'releases working bikes' do
     subject.dock(Bike.new)
