@@ -7,6 +7,22 @@ describe DockingStation do
 
   it { is_expected.to respond_to(:bikes) }
 
+  it  { is_expected.to respond_to(:capacity) }
+
+  #describe 'when new' do
+  #  DockingStation.new capacity
+  #  it 'can be assigned a capacity' do
+  #    expect(subject.capacity).to eq capacity
+  #  end
+  #end # end describe when new
+
+  #it 'has a default capacity' do
+  #  expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
+  #end
+
+
+
+
   it 'releases working bikes' do
     subject.dock(Bike.new)
     bike = subject.release_bike
@@ -32,7 +48,7 @@ describe DockingStation do
       expect { subject.release_bike }.to raise_error ("Sorry, there are no bikes")
     end
 
-  end
+  end # end describe release bike
 
   describe '#dock' do
 
@@ -47,6 +63,6 @@ describe DockingStation do
       expect { subject.dock(bike) }.to raise_error("Sorry, Docking station full")
     end
 
-  end
+  end # end describe dock
 
-end
+end # end describe DockingStation
