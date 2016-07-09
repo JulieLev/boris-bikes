@@ -9,9 +9,17 @@ describe DockingStation do
 
   it  { is_expected.to respond_to(:capacity) }
 
+  context 'initialization' do
+    it 'can have a variable capacity' do
+      subject { DockingStation.new (50) }
+      expect(subject.capacity).to eq 50
+    end
+
     it 'has a default capacity if none set' do
+      subject { DockingStation.new }
       expect(subject.capacity).to eq DockingStation::DEFAULT_CAPACITY
     end
+  end # end context initialization
 
   it 'releases working bikes' do
     subject.dock(Bike.new)
