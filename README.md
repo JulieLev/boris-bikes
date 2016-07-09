@@ -7,8 +7,12 @@ A learning development program to run all the docking stations, simulate all the
 
 Note: Work in progress.
 
-##Authors (Thursday):
+##Authors (Friday to Challenge 16):
 
 * Julie Lev
 
-* Arunas Skirius
+* Bart K
+
+##Challenge 17 on:
+
+* Julie Lev
