@@ -1,6 +1,6 @@
 class Bike
-  attr_accessor :report_broken
-  #alias :broken? :broken
+  attr_accessor :broken
+  alias :broken? :broken
 
   def initialize
     @broken = false

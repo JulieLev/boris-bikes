@@ -16,8 +16,9 @@ class DockingStation
     fail "Sorry, the bikes are broken"
   end
 
-  def dock(bike)
+  def dock(bike, is_broken=false)
     fail "Sorry, Docking station full" if full?
+    bike.report_broken if is_broken == true
     @bikes << bike
     bike
   end
