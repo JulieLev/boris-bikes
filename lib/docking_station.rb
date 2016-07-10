@@ -4,7 +4,7 @@ class DockingStation
   DEFAULT_CAPACITY = 20
 
   attr_accessor :capacity
-  
+
   def initialize (capacity = DEFAULT_CAPACITY)
     @bikes = []
     @capacity = capacity
@@ -12,7 +12,8 @@ class DockingStation
 
   def release_bike
     fail "Sorry, there are no bikes" if empty?
-    @bikes.pop
+    @bikes.each { |bike| return bike unless bike.broken? }
+    fail "Sorry, the bikes are broken"
   end
 
   def dock(bike)
